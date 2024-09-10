@@ -23,7 +23,11 @@ Jupyter Notebook: For interactive data analysis and exploration.
 Git: For version control.
 
 **Key Analysis and Insights:-**
+
 Customer Retention:Calculated the retention rate of customers who made another purchase within 6 months after their first order.
+
 Product Correlation:Examined the correlation between product prices and the number of purchases. A negative correlation suggests price-sensitive customers.
+
 Average Orders Per City:Grouped customers by city and calculated the average number of orders per customer.
+
 Revenue Breakdown:Visualized the percentage revenue contribution by different product categories.
