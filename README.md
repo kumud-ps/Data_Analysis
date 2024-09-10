@@ -11,7 +11,13 @@ We analyze various metrics using SQL for querying and Python (Pandas, NumPy, Mat
 
 **Data Sources:**
 The project uses the following datasets:
-https://www.kaggle.com/datasets/devarajv88/target-dataset?select=products.csv
+**customers:** Contains customer information including customer cities.
+**geolocation:** Geographical data for customers.
+**order_items:** Details of the items ordered in each transaction.
+**orders:** Transactional information, including order timestamps.
+**payments:** Payment details related to each order.
+**products:** Product catalog, including categories and prices.
+**sellers:** Information about product sellers.
 
 **Technologies Used:**
 
