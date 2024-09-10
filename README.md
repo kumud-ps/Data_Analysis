@@ -1,4 +1,5 @@
 Data Analysis Project: SQL + Python
+
 Table of Contents
 Project Overview
 Data Sources
