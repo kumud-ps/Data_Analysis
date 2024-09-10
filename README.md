@@ -16,11 +16,17 @@ https://www.kaggle.com/datasets/devarajv88/target-dataset?select=products.csv
 **Technologies Used:**
 
 **SQL (MySQL):** Used to query and manipulate the data stored in a relational database.
+
 **Python:** Used for data manipulation and visualization.
+
 **Pandas:** For data loading, cleaning, and transformation.
+
 **NumPy:** For numerical operations and correlation calculations.
+
 **Matplotlib and Seaborn:** For data visualization.
+
 **Jupyter Notebook:** For interactive data analysis and exploration.
+
 **Git:** For version control.
 
 **Key Analysis and Insights:-**
