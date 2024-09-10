@@ -1,5 +1,6 @@
 **Data Analysis Project: SQL + Python**
 
+
 **Project Overview:**
 This project showcases data analysis skills using SQL and Python to extract, transform, and analyze business data. 
 The primary goal of this project is to:
