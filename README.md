@@ -2,11 +2,15 @@ Data Analysis Project: SQL + Python
 
 Project Overview:
 This project showcases data analysis skills using SQL and Python to extract, transform, and analyze business data. 
+
 The primary goal of this project is to:
 
 Analyze customer purchase behaviors.
+
 Calculate metrics such as retention rates, product correlations, and average orders.
+
 Visualize insights derived from the data using Python.
+
 We analyze various metrics using SQL for querying and Python (Pandas, NumPy, Matplotlib, Seaborn) for advanced analysis and visualization.
 
 Data Sources:
