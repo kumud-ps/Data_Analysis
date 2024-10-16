@@ -76,14 +76,15 @@ plt.show()
 ```
 
 ## **Results and Insights**
-### **-Likes Distribution:** 
-The number of likes follows a right-skewed distribution, with many videos having relatively few likes.
-### **Views vs. Likes:** 
-There is a positive correlation between views and likes, indicating higher engagement for more viewed content.
-### **Punctuation Analysis:**
-There appears to be a mild relationship between punctuation usage in titles and the number of likes, though further analysis may be needed.
+ - ### **Likes Distribution:**
+   - The number of likes follows a right-skewed distribution, with many videos having relatively few likes.
+ - ### **Views vs. Likes:**
+   - There is a positive correlation between views and likes, indicating higher engagement for more viewed content.
+ - ### **Punctuation Analysis:**
+   - There appears to be a mild relationship between punctuation usage in titles and the number of likes, though further analysis may be needed.
 
-##**Conclusion**
+
+## **Conclusion**
 This project successfully analyzes YouTube data to provide insights into video popularity metrics such as views, likes, and engagement. These insights can help content creators understand trends in viewer engagement and optimize their content strategies.
 
 ## **Future Work**
