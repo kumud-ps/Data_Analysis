@@ -76,7 +76,7 @@ plt.show()
 ```
 
 ## **Results and Insights**
-### -**Likes Distribution:** 
+### **-Likes Distribution:** 
 The number of likes follows a right-skewed distribution, with many videos having relatively few likes.
 ### **Views vs. Likes:** 
 There is a positive correlation between views and likes, indicating higher engagement for more viewed content.
