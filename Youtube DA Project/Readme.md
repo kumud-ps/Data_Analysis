@@ -22,7 +22,7 @@ seaborn
 numpy
 
 ## **Dataset**
-#### The dataset contains the following fields (adjust according to your actual dataset):
+#### The dataset contains the following fields:
 
 video_id: Unique identifier for each video.
 title: Title of the YouTube video.
