@@ -44,6 +44,7 @@ Before starting the analysis, the dataset is cleaned by removing null values, co
 #### Visualizing the distribution of video likes to understand how this metric is spread across different videos.
 
 python code
+
 plt.figure(figsize=(10,6))
 sns.histplot(df['likes'], kde=True)
 plt.title('Distribution of Likes')
@@ -53,6 +54,7 @@ plt.show()
 #### Exploring the correlation between views and likes.
 
 python code
+
 plt.figure(figsize=(10,6))
 sns.scatterplot(x='views', y='likes', data=df)
 plt.title('Views vs. Likes')
@@ -62,6 +64,7 @@ plt.show()
 #### Examining how the number of punctuations in video titles correlates with likes.
 
 python code
+
 df['count_punctuation'] = df['title'].apply(lambda x: sum([1 for c in x if c in string.punctuation]))
 plt.figure(figsize=(8,6))
 sns.boxplot(x='count_punctuation', y='likes', data=df)
