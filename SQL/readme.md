@@ -35,13 +35,12 @@ The dataset files used in this project (e.g., customers.csv, orders.csv, etc.).
 
 ## Data Sources
 - The following CSV files are loaded into the MySQL database:
-
--- customers.csv: Customer details (e.g., customer_id, name).
--- orders.csv: Order information (e.g., order_id, order_date).
--- sellers.csv: Seller information (e.g., seller_id, location).
--- products.csv: Product catalog (e.g., product_id, category).
--- order_items.csv: Itemized details for each order.
--- geolocation.csv: Geographical data of orders and sellers.
+  - customers.csv: Customer details (e.g., customer_id, name).
+  - orders.csv: Order information (e.g., order_id, order_date).
+  - sellers.csv: Seller information (e.g., seller_id, location).
+  - products.csv: Product catalog (e.g., product_id, category).
+  - order_items.csv: Itemized details for each order.
+  - geolocation.csv: Geographical data of orders and sellers.
 
 ## Key Steps
 ### 1. SQL Table Creation
