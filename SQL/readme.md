@@ -32,6 +32,7 @@ pip install pandas mysql-connector-python matplotlib seaborn numpy
 This is the main notebook containing the integration code.
 ### CSV Files: 
 The dataset files used in this project (e.g., customers.csv, orders.csv, etc.).
+
 ## Data Sources
 - The following CSV files are loaded into the MySQL database:
 
@@ -90,6 +91,9 @@ conn = mysql.connector.connect(
 Launch the notebook (SQL + Python.ipynb) to load the CSV data, create tables, and perform operations.
 
 ## Future Enhancements
-Data Visualization: Add more detailed data visualization techniques using matplotlib and seaborn.
-Advanced Analytics: Apply advanced analytics like clustering or regression on the dataset.
-API Integration: Integrate API endpoints to dynamically fetch and load data into MySQL.
+### Data Visualization: 
+Add more detailed data visualization techniques using matplotlib and seaborn.
+### Advanced Analytics: 
+Apply advanced analytics like clustering or regression on the dataset.
+### API Integration: 
+Integrate API endpoints to dynamically fetch and load data into MySQL.
