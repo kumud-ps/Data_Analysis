@@ -1,0 +1,141 @@
+Step 1: Generate Synthetic Data
+python
+Copy code
+import numpy as np
+import pandas as pd
+import random
+
+# Function to generate synthetic insurance data
+def generate_insurance_data(n_rows=1000):
+    np.random.seed(42)
+    random.seed(42)
+    
+    # Generate synthetic columns
+    data = {
+        'PolicyID': np.arange(1, n_rows + 1),
+        'CustomerName': np.random.choice(['Alice', 'Bob', 'Charlie', 'Diana', 'Eve', 'Frank'], size=n_rows),
+        'Age': np.random.randint(18, 80, size=n_rows),
+        'PolicyType': np.random.choice(['Health', 'Auto', 'Home', 'Life'], size=n_rows),
+        'PremiumAmount': np.round(np.random.uniform(500, 5000, size=n_rows), 2),
+        'ClaimAmount': np.random.choice([0, 0, 0, np.nan, np.nan, np.round(np.random.uniform(100, 10000), 2)], size=n_rows),
+        'DateOfPurchase': pd.to_datetime('2022-01-01') + pd.to_timedelta(np.random.randint(0, 365, size=n_rows), unit='days'),
+        'Fraudulent': np.random.choice([0, 1], size=n_rows, p=[0.95, 0.05]),
+    }
+    
+    df = pd.DataFrame(data)
+    
+    # Introduce some nulls
+    for col in ['CustomerName', 'PolicyType']:
+        df.loc[df.sample(frac=0.05).index, col] = None
+    
+    # Add duplicates
+    duplicates = df.sample(frac=0.1)
+    df = pd.concat([df, duplicates])
+    
+    # Shuffle the data
+    df = df.sample(frac=1).reset_index(drop=True)
+    
+    return df
+
+# Generate the data
+insurance_data = generate_insurance_data()
+
+# Save the data to a CSV file
+insurance_data.to_csv("insurance_data.csv", index=False)
+print("Synthetic insurance data saved to 'insurance_data.csv'")
+Step 2: Advanced Exploratory Data Analysis (EDA)
+python
+Copy code
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Load the data
+df = pd.read_csv("insurance_data.csv")
+
+# 1. General Overview
+print("Shape of data:", df.shape)
+print("\nData Types:\n", df.dtypes)
+print("\nMissing Values:\n", df.isnull().sum())
+print("\nDuplicate Rows:", df.duplicated().sum())
+
+# 2. Handling Missing Data
+print("\nRows with missing data:")
+print(df[df.isnull().any(axis=1)].head())
+
+# 3. Summary Statistics
+print("\nSummary Statistics:")
+print(df.describe(include='all'))
+
+# 4. Correlation Matrix (Numerical Columns)
+plt.figure(figsize=(10, 6))
+sns.heatmap(df.corr(), annot=True, cmap='coolwarm', fmt='.2f')
+plt.title("Correlation Matrix")
+plt.show()
+
+# 5. Fraud Analysis
+fraud_counts = df['Fraudulent'].value_counts(normalize=True) * 100
+print("\nFraudulent Transactions (%):\n", fraud_counts)
+
+plt.figure(figsize=(6, 4))
+sns.countplot(data=df, x='Fraudulent', palette='coolwarm')
+plt.title("Fraudulent vs Non-Fraudulent")
+plt.show()
+
+# 6. Distribution of Premium Amount
+plt.figure(figsize=(8, 6))
+sns.histplot(df['PremiumAmount'], kde=True, bins=30, color='blue')
+plt.title("Distribution of Premium Amount")
+plt.xlabel("Premium Amount")
+plt.ylabel("Frequency")
+plt.show()
+
+# 7. Claims vs Premiums by Policy Type
+plt.figure(figsize=(10, 6))
+sns.boxplot(data=df, x='PolicyType', y='ClaimAmount', hue='Fraudulent', palette='coolwarm')
+plt.title("Claims Amount vs Premium by Policy Type")
+plt.ylabel("Claim Amount")
+plt.show()
+
+# 8. Age Distribution by Fraudulent
+plt.figure(figsize=(10, 6))
+sns.boxplot(data=df, x='Fraudulent', y='Age', palette='coolwarm')
+plt.title("Age Distribution by Fraudulent Status")
+plt.show()
+
+# 9. Missing Data Heatmap
+plt.figure(figsize=(12, 6))
+sns.heatmap(df.isnull(), cbar=False, cmap='viridis')
+plt.title("Heatmap of Missing Data")
+plt.show()
+
+# 10. Removing Duplicates and Handling Missing Values
+# Drop duplicates
+df_cleaned = df.drop_duplicates()
+
+# Fill missing CustomerName with "Unknown"
+df_cleaned['CustomerName'].fillna("Unknown", inplace=True)
+
+# Fill missing PolicyType with mode
+df_cleaned['PolicyType'].fillna(df['PolicyType'].mode()[0], inplace=True)
+
+# Fill missing ClaimAmount with median
+df_cleaned['ClaimAmount'].fillna(df['ClaimAmount'].median(), inplace=True)
+
+print("\nData after cleaning:")
+print(df_cleaned.isnull().sum())
+
+# Save cleaned data
+df_cleaned.to_csv("cleaned_insurance_data.csv", index=False)
+print("\nCleaned data saved to 'cleaned_insurance_data.csv'")
+Key Features of the Script
+Synthetic Data:
+
+Includes missing values, duplicates, and various data types.
+EDA:
+
+General statistics and missing value analysis.
+Visualization of data distributions and correlations.
+Fraud analysis.
+Data Cleaning:
+
+Handles missing values and duplicates.
