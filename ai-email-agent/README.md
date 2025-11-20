@@ -128,7 +128,7 @@ streamlit run dashboard.py --server.port=8501
 ### Using Docker Compose (Recommended)
 
 ```bash
-# Start all services
+# Start all services (includes dashboard)
 docker-compose up -d
 
 # View logs
@@ -137,6 +137,11 @@ docker-compose logs -f
 # Stop services
 docker-compose down
 ```
+
+This will start:
+- **API Server**: http://localhost:8000
+- **Web Dashboard**: http://localhost:8501
+- **Ollama Service**: http://localhost:11434
 
 ### Using Docker
 
