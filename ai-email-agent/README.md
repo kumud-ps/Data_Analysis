@@ -12,6 +12,7 @@ A cost-free AI-powered email automation agent that reads Gmail emails, generates
 - **Rate Limiting**: Prevents Gmail API abuse with intelligent rate limiting
 - **Comprehensive Logging**: Structured logging with audit trails
 - **Web Dashboard**: Beautiful Streamlit-based control interface
+- **Telegram Bot**: Mobile-friendly control and monitoring
 - **REST API**: Full HTTP API for monitoring and control
 - **Zero Cost**: Runs on free hosting platforms (Render, Railway)
 
