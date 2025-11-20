@@ -182,7 +182,7 @@ Once running, you have several ways to control and monitor your AI Email Agent:
 
 ### 🎛️ Web Dashboard (Recommended)
 
-Visit **http://localhost:8501** for a beautiful, user-friendly interface that includes:
+Visit **http://localhost:8502** for a beautiful, user-friendly interface that includes:
 
 - **System Status Overview**: Real-time health monitoring
 - **Control Panel**: Start/stop monitoring, process emails manually
