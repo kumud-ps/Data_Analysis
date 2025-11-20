@@ -61,7 +61,7 @@ def start_dashboard():
         dashboard_process = subprocess.Popen([
             sys.executable, "-m", "streamlit", "run",
             "dashboard.py",
-            "--server.port", "8501",
+            "--server.port", "8502",
             "--server.address", "0.0.0.0"
         ], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
