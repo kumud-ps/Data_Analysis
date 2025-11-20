@@ -1,0 +1,80 @@
+services:
+  - type: web
+    name: ai-email-agent
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn src.main:app --host 0.0.0.0 --port $PORT"
+    healthCheckPath: /health
+    healthCheckTimeout: 30
+    autoDeploy: true
+
+    # Environment variables (configure these in Render dashboard)
+    envVars:
+      - key: EMAIL_GMAIL_USERNAME
+        sync: false
+        description: "Your Gmail email address"
+
+      - key: EMAIL_GMAIL_APP_PASSWORD
+        sync: false
+        description: "Gmail app password (16 characters)"
+
+      - key: AI_OLLAMA_BASE_URL
+        value: "http://localhost:11434"
+        description: "Ollama API URL (external service)"
+
+      - key: AI_MODEL_NAME
+        value: "llama3.2:1b"
+        description: "Ollama model to use"
+
+      - key: AI_TEMPERATURE
+        value: "0.7"
+
+      - key: AI_MAX_TOKENS
+        value: "500"
+
+      - key: AI_TIMEOUT
+        value: "30"
+
+      - key: PROCESSING_AUTO_REPLY_ENABLED
+        value: "true"
+
+      - key: PROCESSING_DELETE_PROCESSED
+        value: "true"
+
+      - key: PROCESSING_MAX_EMAILS_PER_BATCH
+        value: "10"
+
+      - key: PROCESSING_CHECK_INTERVAL_MINUTES
+        value: "5"
+
+      - key: PROCESSING_QUIET_HOURS_START
+        value: "22:00"
+
+      - key: PROCESSING_QUIET_HOURS_END
+        value: "08:00"
+
+      - key: SECURITY_ENABLE_CONTENT_FILTER
+        value: "true"
+
+      - key: SECURITY_MAX_ATTACHMENT_SIZE_MB
+        value: "5"
+
+      - key: SECURITY_LOG_LEVEL
+        value: "INFO"
+
+      - key: SECURITY_ENABLE_AUDIT_LOG
+        value: "true"
+
+      - key: API_HOST
+        value: "0.0.0.0"
+
+      - key: API_DEBUG
+        value: "false"
+
+      - key: API_CORS_ORIGINS
+        value: "https://yourappdomain.onrender.com,http://localhost:3000"
+
+# Note: For the free plan, you'll need to configure an external Ollama service
+# since Render's free tier doesn't support persistent background services
+# You can use a separate VPS or Railway instance for Ollama
