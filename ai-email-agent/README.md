@@ -176,9 +176,24 @@ docker run -p 8000:8000 --env-file .env ai-email-agent
 
 Similar to Render, using Railway's free tier with Docker deployment.
 
-## 📚 API Documentation
+## 📚 User Interfaces
 
-Once running, visit:
+Once running, you have several ways to control and monitor your AI Email Agent:
+
+### 🎛️ Web Dashboard (Recommended)
+
+Visit **http://localhost:8501** for a beautiful, user-friendly interface that includes:
+
+- **System Status Overview**: Real-time health monitoring
+- **Control Panel**: Start/stop monitoring, process emails manually
+- **Statistics Dashboard**: Visual charts and processing metrics
+- **Recent Activity**: Detailed processing history
+- **Configuration Viewer**: Current settings overview
+- **Auto-refresh**: Keep data up-to-date automatically
+
+### 🔌 API Documentation
+
+For programmatic control:
 - **Swagger UI**: `http://localhost:8000/docs`
 - **ReDoc**: `http://localhost:8000/redoc`
 
