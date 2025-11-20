@@ -95,12 +95,32 @@ ollama pull llama3.2:1b
 
 ### 5. Run the Application
 
+#### Option 1: With Dashboard (Recommended)
+
+```bash
+# Start both API and Streamlit dashboard
+python run_dashboard.py
+```
+
+This will start:
+- **API Server**: http://localhost:8000
+- **Web Dashboard**: http://localhost:8501
+
+#### Option 2: API Only
+
 ```bash
 # Development mode
 python src/main.py
 
 # Or with uvicorn directly
 uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload
+```
+
+#### Option 3: Dashboard Only
+
+```bash
+# Start dashboard (API must be running separately)
+streamlit run dashboard.py --server.port=8501
 ```
 
 ## 🐳 Docker Deployment
