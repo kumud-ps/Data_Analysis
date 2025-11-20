@@ -22,6 +22,27 @@ services:
     networks:
       - ai-email-network
 
+  dashboard:
+    build: .
+    container_name: ai-email-dashboard
+    ports:
+      - "8501:8501"
+    command: streamlit run dashboard.py --server.port=8501 --server.address=0.0.0.0
+    environment:
+      - EMAIL_GMAIL_USERNAME=${EMAIL_GMAIL_USERNAME}
+      - EMAIL_GMAIL_APP_PASSWORD=${EMAIL_GMAIL_APP_PASSWORD}
+      - AI_OLLAMA_BASE_URL=http://ollama:11434
+      - AI_MODEL_NAME=llama3.2:1b
+    volumes:
+      - ./logs:/app/logs
+      - ./.env:/app/.env
+    restart: unless-stopped
+    depends_on:
+      - ai-email-agent
+      - ollama
+    networks:
+      - ai-email-network
+
   ollama:
     image: ollama/ollama:latest
     container_name: ollama
