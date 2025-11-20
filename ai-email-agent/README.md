@@ -108,7 +108,7 @@ python run_dashboard.py
 
 This will start:
 - **API Server**: http://localhost:8000
-- **Web Dashboard**: http://localhost:8501
+- **Web Dashboard**: http://localhost:8502
 
 #### Option 2: API Only
 
@@ -144,7 +144,7 @@ docker-compose down
 
 This will start:
 - **API Server**: http://localhost:8000
-- **Web Dashboard**: http://localhost:8501
+- **Web Dashboard**: http://localhost:8502
 - **Ollama Service**: http://localhost:11434
 
 ### Using Docker
