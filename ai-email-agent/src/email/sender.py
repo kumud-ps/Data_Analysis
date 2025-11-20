@@ -7,7 +7,7 @@ from email import encoders
 from email.utils import formataddr
 from typing import List, Dict, Any, Optional
 import asyncio
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from ..config.settings import get_settings
 from ..utils.logger import get_logger, audit_logger
