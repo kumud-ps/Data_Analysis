@@ -41,6 +41,9 @@ A cost-free AI-powered email automation agent that reads Gmail emails, generates
 5. **API Layer** (`src/main.py`)
    - FastAPI application with comprehensive endpoints
 
+6. **Web Dashboard** (`dashboard.py`)
+   - Streamlit-based user interface for control and monitoring
+
 ## 🚀 Quick Start
 
 ### Prerequisites
