@@ -26,8 +26,8 @@ services:
     build: .
     container_name: ai-email-dashboard
     ports:
-      - "8501:8501"
-    command: streamlit run dashboard.py --server.port=8501 --server.address=0.0.0.0
+      - "8502:8502"
+    command: streamlit run dashboard.py --server.port=8502 --server.address=0.0.0.0
     environment:
       - EMAIL_GMAIL_USERNAME=${EMAIL_GMAIL_USERNAME}
       - EMAIL_GMAIL_APP_PASSWORD=${EMAIL_GMAIL_APP_PASSWORD}
