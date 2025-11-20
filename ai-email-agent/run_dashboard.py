@@ -51,7 +51,7 @@ def start_api_server():
 
 def start_dashboard():
     """Start the Streamlit dashboard"""
-    print("🎛️ Starting Streamlit dashboard on http://localhost:8501")
+    print("🎛️ Starting Streamlit dashboard on http://localhost:8502")
 
     try:
         # Change to the correct directory
