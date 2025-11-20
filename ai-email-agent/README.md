@@ -191,6 +191,45 @@ Visit **http://localhost:8502** for a beautiful, user-friendly interface that in
 - **Configuration Viewer**: Current settings overview
 - **Auto-refresh**: Keep data up-to-date automatically
 
+### 🤖 Telegram Bot (Mobile Control)
+
+Control your AI Email Agent from anywhere using Telegram! Perfect for mobile access and quick actions.
+
+**Setup:**
+```bash
+# Run setup assistant for detailed instructions
+python telegram_setup.py
+
+# After setup, add to .env:
+TELEGRAM_BOT_TOKEN=your_bot_token_here
+TELEGRAM_USER_ID=your_user_id_here  # Optional
+```
+
+**Start Telegram Bot:**
+```bash
+# Make sure API server is running first
+python src/main.py &
+
+# Then start Telegram bot
+python telegram_bot.py
+```
+
+**Available Commands:**
+- `/start` - Welcome message with quick actions
+- `/status` - Current monitoring status
+- `/health` - System health check
+- `/start_monitoring [minutes]` - Start email monitoring
+- `/stop_monitoring` - Stop email monitoring
+- `/process_emails [limit]` - Process emails manually
+- `/stats` - View processing statistics
+
+**Features:**
+- ✅ Inline buttons for quick actions
+- 📊 Real-time status updates
+- 🔄 Manual email processing
+- 📈 Statistics and health monitoring
+- 📱 Mobile-friendly interface
+
 ### 🔌 API Documentation
 
 For programmatic control:
