@@ -145,7 +145,7 @@ def main():
 
         print("\n" + "=" * 60)
         print("🎉 Both servers are running!")
-        print("📊 Dashboard: http://localhost:8501")
+        print("📊 Dashboard: http://localhost:8502")
         print("🔗 API Docs:   http://localhost:8000/docs")
         print("❌ Health:     http://localhost:8000/health")
         print("=" * 60)
