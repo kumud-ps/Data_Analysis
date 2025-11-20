@@ -1,1 +1,6 @@
-
+# Ignore env files
+.env
+.env.*
+# or the specific path if you keep envs in a folder:
+# .gitignore/.env
+ai-email-agent/.env
