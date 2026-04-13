@@ -1,0 +1,126 @@
+The analysis includes data cleaning, exploration, and visualization to understand various aspects of Netflix's content library. The document covers the following key areas:
+
+Data Cleaning and Preparation: Handling missing values, converting data types, and splitting columns.
+Exploratory Data Analysis (EDA): Analyzing the distribution of content types, genres, and other attributes. ​
+Visualizations: Creating various plots to visualize trends and patterns in the data. ​
+
+
+Handling Missing Values:
+
+Problem: Missing values in columns like director, cast, country, rating, and date_added. ​
+Solution: Filled missing values with "UNKNOWN" and dropped rows with missing date_added.
+
+
+
+Data Type Conversion:
+
+Problem: Incorrect data types for columns like date_added. ​
+Solution: Converted date_added to datetime format. ​
+
+
+
+Splitting Columns:
+
+Problem: Columns like director, cast, country, and listed_in contain multiple values.
+Solution: Split these columns into individual values and exploded them into separate rows.
+
+
+
+Top Genres Analysis:
+
+Problem: Identifying the most common genres. ​
+Solution: Counted the occurrences of each genre and visualized the top 10 genres using a bar plot. ​
+
+
+
+Content Added by Year and Category:
+
+Problem: Understanding the trend of content addition over the years. ​
+Solution: Created a stacked bar plot to show the number of content items added each year by category. ​
+
+
+
+Top Content Types Added Per Year:
+
+Problem: Identifying the top content types added each year. ​
+Solution: Grouped data by year and type, then visualized the top 3 content types per year using a bar plot. ​
+
+
+
+Top Genres Added Per Year:
+
+Problem: Identifying the top genres added each year. ​
+Solution: Grouped data by year and genre, then visualized the top 3 genres per year using a bar plot.
+
+
+
+Top Genres by Country:
+
+Problem: Understanding the distribution of genres by country. ​
+Solution: Created a heatmap to visualize the count of each genre by country. ​
+
+
+
+Content Types Available in Different Countries:
+
+Problem: Analyzing the availability of content types across different countries. ​
+Solution: Created a bar plot to show the count of content types available in each country. ​
+
+
+
+Movies Released Per Year:
+
+Problem: Analyzing the trend of movie releases over the last 20-30 years. ​
+Solution: Created a line plot to show the number of movies released each year. ​
+
+
+
+Comparison of TV Shows vs. Movies:
+
+Problem: Comparing the number of TV shows and movies added over the years. ​
+Solution: Created a line plot to compare the count of TV shows and movies added each year. ​
+
+
+
+Best Time to Launch a TV Show:
+
+Problem: Identifying the best month to launch a TV show. ​
+Solution: Created a bar plot to show the number of TV shows added each month. ​
+
+
+
+Top Directors and Cast:
+
+Problem: Identifying the top directors and cast members for different types of content. ​
+Solution: Grouped data by type and director/cast, then visualized the top directors and cast members. ​
+
+
+
+Heatmap of Content Count by Director and Genre:
+
+Problem: Visualizing the distribution of content by director and genre. ​
+Solution: Created a heatmap to show the count of content items by director and genre. ​
+
+
+
+TV Show to Movie Ratio Over the Years:
+
+Problem: Analyzing the ratio of TV shows to movies added over the years. ​
+Solution: Created a line plot to show the TV show to movie ratio over the years. ​
+
+
+
+Number of Shows by Rating and Type:
+
+Problem: Analyzing the distribution of shows by rating and type. ​
+Solution: Created a bar plot to show the count of shows by rating and type. ​
+
+
+
+Summary of Key Findings
+
+Top Genres: The most common genres include Documentaries, International TV Shows, TV Dramas, and TV Mysteries. ​
+Content Trends: There has been a significant increase in the number of TV shows and movies added over the years, with a noticeable rise in TV shows in recent years.
+Best Time to Launch TV Shows: The best months to launch TV shows are September and October.
+Top Directors and Cast: The analysis identified the most prolific directors and cast members for both movies and TV shows. ​
+Geographical Distribution: The availability of content types and genres varies significantly across different countries. ​
